@@ -93,6 +93,8 @@ export class CircleCIPipelineTrigger {
     info(`Triggering CircleCI Pipeline for ${this.owner}/${this.repo}`);
     info(`  Triggering URL: ${this.url}`);
     const trigger = this.tag ? `tag: ${this.tag}` : `branch: ${this.branch}`;
+    info(`  Check tag: ${this.tag}`);
+    info(`  Check branch: ${this.branch}`);
     info(`  Triggering ${trigger}`);
     info(`    Parameters:\n${JSON.stringify(this.parameters)}`);
     endGroup();
